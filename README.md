@@ -3,9 +3,9 @@
 ## Instructions to Install and run
 
 <ul>
-    <li>Run **node -i** in both Frontend and Backend folders</li>
-    <li>For frontend the command is **npm run start**</li>
-    <li>For backend the command is **node weatherRun.js**</li>
+    <li>Run <strong>node -i</strong> in both Frontend and Backend folders</li>
+    <li>For frontend the command is <strong>npm run start</strong></li>
+    <li>For backend the command is <strong>node weatherRun.js</strong></li>
     <li>Frontend port is 3000 and Backend is on 3010</li>
 </ul>
 
