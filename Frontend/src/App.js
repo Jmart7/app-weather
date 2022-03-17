@@ -4,7 +4,7 @@ import {useState} from 'react';
 
 function App() {
 
-  const [city, setCity] = useState("minneapolis"); //Declare minneapolis as the default value for city
+  const [city, setCity] = useState(""); //Declare minneapolis as the default value for city
   const [days, setDays] = useState(1); //declare 1 as default value for days
   const [listOfInfo, setListOfInfo] = useState([]); //Set a list with no values yet so it can be filled later with the values i get from the backend
 
@@ -21,7 +21,7 @@ function App() {
   //ClearList basically clears the list to change the page
   function clearList() {
     setListOfInfo([]);
-  } 
+  }
 
   return (
     <>
@@ -29,12 +29,14 @@ function App() {
       { listOfInfo.length === 0 
         ? <div id="form">
             <select name="City" id="city" value={city} onChange={e => setCity(e.target.value)}>
-              <option value="minneapolis">Minneapolis</option>
-              <option value="jackson">Jackson</option>
-              <option value="kansas">Kansas</option>
-              <option value="new york">New York</option>
+              <option value="" disabled selected>Select a city</option>
+              <option value="Minneapolis">Minneapolis</option>
+              <option value="Jackson">Jackson</option>
+              <option value="Kansas">Kansas</option>
+              <option value="New York">New York</option>
             </select>
-            <select name="Days" id="days" placeholder="Select a number" value={days} onChange={e => setDays(e.target.value)}>
+            <input type="text" name="City" id="other" value={city} style={{display:'none'}}/>
+            <select name="Days" id="days" value={days} onChange={e => setDays(e.target.value)}>
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
@@ -50,7 +52,7 @@ function App() {
                   <p>Minimum: {item.min_temp}°C</p>
                   <p>Maximum: {item.max_temp}°C</p>
                   <p>{item.description}</p>
-                  <p>{item.datetime}</p>
+                  <p>Date: {item.datetime}</p>
                   <p>Sunrise: {item.sunrise_ts}</p>
                   <p>Sunset: {item.sunset_ts}</p>
                 </div>

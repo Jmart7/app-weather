@@ -8,7 +8,7 @@ export class WeatherServices{
                     '&key=' + process.env.WEATHER_API_KEY +
                     '&days=' + amountOfDaysP;
         
-        //Fetch
+        //Fetch and load response with the JSON obtained from the API
         const result = await fetch (url, {
             method: 'GET',
         }).then(res => res.json());
@@ -20,7 +20,7 @@ export class WeatherServices{
         result.data.forEach(element => {
             const unixsunrise = new Date(element.sunrise_ts * 1000); //Convert Unix time to HH:MM
             const unixSunset = new Date(element.sunset_ts * 1000); //Convert Unix time to HH:MM
-            let infoAboutDay = {};
+            let infoAboutDay = {}; //Initiliaze an empty json and we fill it with the info we need
             infoAboutDay['min_temp'] = element.min_temp;
             infoAboutDay['max_temp'] = element.max_temp;
             infoAboutDay['description'] = element.weather.description;
@@ -30,8 +30,6 @@ export class WeatherServices{
             listOfDays.push(infoAboutDay);
         });
 
-        console.log(listOfDays);
- 
         return listOfDays; //Return the list with all the days with it's info
     }
 }

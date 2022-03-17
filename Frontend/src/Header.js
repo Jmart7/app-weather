@@ -3,13 +3,9 @@ function Header() {
       <>
         <div id="headerContent">
           <div id="Logo">
-            <h3 id="Titulo">INNOVID</h3>
+            <h3 id="Title">INNOVID</h3>
           </div>
-          <p id="pe">
-          </p>
-          <div>
-            <h5></h5>
-          </div>
+          <p id="Bar"></p>
         </div>
       </>
     );
