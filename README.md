@@ -3,9 +3,9 @@
 ## Instructions to Install and run
 
 <ul>
-    <li>Run `node -i` in both Frontend and Backend folders</li>
-    <li>For frontend the command is `npm run start`</li>
-    <li>For backend the command is `node weatherRun.js</li>
+    <li>Run **node -i** in both Frontend and Backend folders</li>
+    <li>For frontend the command is **npm run start**</li>
+    <li>For backend the command is **node weatherRun.js**</li>
     <li>Frontend port is 3000 and Backend is on 3010</li>
 </ul>
 
@@ -34,7 +34,7 @@ If you had more time, what would you add to your code?
 ### Answer
 
 First of all, the bonus, which i didn't do.
-I would dockerize it so it can be loaded in only one command.
+I would **dockerize** it so it can be loaded in only one command.
 Also, i could add much more Styling to the page with more in deep CSS.
 Finally, handling errors could be improved as i had a simple try catch.
 
