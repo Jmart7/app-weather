@@ -2,8 +2,9 @@ import './App.css';
 import Header from './Header';
 import {useState} from 'react';
 
-function App() {
+function App() { // tengo una function component
 
+  //Declaro 3 variables usando hooks.
   const [city, setCity] = useState(""); //Declare minneapolis as the default value for city
   const [days, setDays] = useState(1); //declare 1 as default value for days
   const [listOfInfo, setListOfInfo] = useState([]); //Set a list with no values yet so it can be filled later with the values i get from the backend
@@ -14,9 +15,10 @@ function App() {
     .then(res => res.json()) //Response as JSON
     .then(list => { 
       console.log(list);
-      setListOfInfo([...list]);
+      setListOfInfo([...list]); //destructuring de la lista, creo una nueva lista con todos los elementos de list, que fue lo que me vino de backend. el metodo de asignar de los hooks necesita una lista nueva en vez de list.
     });
   };
+
 
   //ClearList basically clears the list to change the page
   function clearList() {
@@ -26,7 +28,7 @@ function App() {
   return (
     <>
       <Header/>
-      { listOfInfo.length === 0 
+      { listOfInfo.length === 0 //estado inicial, despues vuelve a renderizar cuando cambia el estado de listOfInfo
         ? <div id="form">
             <select name="City" id="city" value={city} onChange={e => setCity(e.target.value)}>
               <option value="" disabled selected>Select a city</option>
@@ -43,7 +45,7 @@ function App() {
             </select>
             <button onClick={onSubmit}>Submit</button>
         </div>
-        : <div id="grid">
+        : <div id="grid"> 
             <button onClick={clearList}>Back</button>
             <h2 id="daysTitle">{days} Days Forecast for {city}</h2>
             <div id="results">
