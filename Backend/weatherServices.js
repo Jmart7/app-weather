@@ -9,7 +9,7 @@ export class WeatherServices{
                     '&days=' + amountOfDaysP;
         
         //Fetch and load response with the JSON obtained from the API
-        const result = await fetch (url, {
+        const result = await fetch (url, { //le hago una request de tipo get a la api para que me devuelva una promise que va a ser el json que queremos.
             method: 'GET',
         }).then(res => res.json());
 

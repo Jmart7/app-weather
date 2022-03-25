@@ -16,8 +16,8 @@ function App() { // tengo una function component
     .then(list => { 
       console.log(list);
       setListOfInfo([...list]); //destructuring de la lista, creo una nueva lista con todos los elementos de list, que fue lo que me vino de backend. el metodo de asignar de los hooks necesita una lista nueva en vez de list.
-    });
-  };
+    }); // El set list of info lo podria poner como que me costo ya que por alguna razon no me pasaba la lista y el problema era que necesitabamos crear una nueva lista
+  }; //los tres puntos se llaman Spread
 
 
   //ClearList basically clears the list to change the page
