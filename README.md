@@ -2,12 +2,21 @@
 
 ## Instructions to Install and run
 
-Run docker-compose up --build
+### Linux
 
-## Comments
+Run `docker-compose up --build`
 
-<ul>
-    <li>The .env from the backend is included in order to facilitate testing the application. In a real world app, the .env file won't be commited as i did.</li>
-    <li>I tried asking but got no response so i made the decision to instead of getting the day and night time, i show the min and max temperature of a day. This decision was made because the api doesn't provide such field in the json i got as the response.</li>
-    <li>Also i created a private git repository but no username was given to me so i can't give access to it, that's why i'm giving the zip instead.</li>
-</ul>
+### Windows
+
+As i didn't setup the docker on windows, i'll explain how to run it withoud it
+
+Run `npm install` on both Frontend and Backend folders.
+After that you can do `npm run start` on both folders too.
+
+### Comments
+
+You should use your own .env on the Backend folder as it requires an apiKey and an apiUrl.
+
+The apiUrl is : `https://api.weatherbit.io/v2.0/forecast/daily?`
+
+As for the apiKey you should go to the page mentioned above, sign up and ask for the key.
