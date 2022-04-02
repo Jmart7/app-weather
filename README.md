@@ -4,44 +4,6 @@
 
 Run docker-compose up --build
 
-## Follow-up Questions
-
-### Question
-
-Did you face any challenge with the test? If so, what is the biggest challenge you faced?
-
-### Answer
-
-Yes, the most challenging situation i faced was the connection between the backend and frontend, as i have to adapt all the backend to what the frontend wants as response.
-
-### Question
-
-How long did it take you to complete the assignment?
-
-### Answer
-
-As for the backend, it took me like 1.5 hours or 2 hours but with what i mentioned in the previous question, there were a lot of adaptations i had to do like filtering the JSON i got from the api, as it gives much more information than i needed. So it took me much more time as i've been modifying the code as soon as i found something else to add or to remove.
-
-### Question
-
-If you had more time, what would you add to your code?
-
-### Answer
-
-First of all, the bonus, which i didn't do.
-Also, i could add much more Styling to the page with more in deep CSS.
-Finally, handling errors could be improved as i had a simple try catch.
-
-### Question
-
-How would you test your code? Describe a few tests you would write for this task.
-
-### Answer
-
-I would test if the response i get from the API is correct by passing a non-existant city and a real city and checking if the expected output is the same as the real output.
-Also i could try to see if there is any vulnerability by checking each function.
-Finally i would do an E2E test by using the api and testing each combination (as there are only 12) and see if it works well.
-
 ## Comments
 
 <ul>
