@@ -1,0 +1,25 @@
+#Set the version to 2 so i can use the "services" syntax
+version: '2'
+
+#Services
+services:
+
+  frontend:
+    #The name of the frontend image
+    image: app-weather:latest
+    #The Folder to build
+    build: ./Frontend
+    #Map the ports
+    ports:
+      - "3000:3000"
+  
+  backend:
+    #The name of the backend image
+    image: jmart7/app-weather
+    #Building inside the context(folder) Backend and i tell docker to search for Dockerfile as a dockerfile
+    build: 
+      context: Backend
+      dockerfile: Dockerfile
+    #Map the ports
+    ports:
+      - "3010:3010"
