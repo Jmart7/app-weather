@@ -8,7 +8,7 @@ Run `docker-compose up --build`
 
 ### Windows
 
-As i didn't setup the docker on windows, i'll explain how to run it withoud it
+As i didn't setup the docker on windows, i'll explain how to run it without it
 
 Run `npm install` on both Frontend and Backend folders.
 After that you can do `npm run start` on both folders too.
